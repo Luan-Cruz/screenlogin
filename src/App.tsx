@@ -7,7 +7,7 @@ import pen from './assets/pen.svg';
 import eyeVisibility from './assets/eyeVisibility.svg';
 import Gmail from './assets/Gmail.svg'
 import gitHub from './assets/gitHub.svg'
-
+import { Text } from '@chakra-ui/react'
 function App() {
   return (
     <div className='container'>
@@ -30,6 +30,7 @@ function App() {
             </InputRightElement>
             <Input placeholder='Digite sua senha' type='password' className="input" />
           </InputGroup>
+          <p className='links'>Esqueceu a senha?</p>
           <Button colorScheme='blue' className='button'>Entrar</Button>
         </div>
         <p>Ou prossiga com:</p>
@@ -41,8 +42,9 @@ function App() {
            Gmail
           </Button>
         </div>
-        <div className=''>
-
+        <div className='futter'>
+              <p>Não consegue entrar?</p> 
+              <p className='links'>Crie uma Conta</p>
         </div>
       </div>
     </div>

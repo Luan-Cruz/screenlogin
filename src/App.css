@@ -63,3 +63,16 @@
   width: 35%;
   margin-top: 2rem;
 }
+.futter {
+  display: flex;
+  flex-direction: row; 
+  justify-content: space-around;
+
+}
+
+.links {
+  margin-left: 0.5rem;
+  color: #0C65E3;
+  text-decoration: underline;
+  cursor: pointer;
+}
