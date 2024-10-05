@@ -1,26 +1,53 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Input } from '@chakra-ui/react';
+import AtlasLogo from './assets/AtlasLogo.svg';
+import { Button, InputGroup, InputRightElement } from '@chakra-ui/react';
+import pen from './assets/pen.svg';
+import eyeVisibility from './assets/eyeVisibility.svg';
+import Gmail from './assets/Gmail.svg'
+import gitHub from './assets/gitHub.svg'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+      <div className='loginContainer'>
+        <div className='imgContainer'>
+          <img src={AtlasLogo} alt="LogoMarca Atlas" />
+          <p>Entre para continuar</p>
+        </div>
+        <div className='inputContainer'>
+          <InputGroup>
+            <InputRightElement pointerEvents='none'>
+              <img src={pen} alt="Caneta" />
+            </InputRightElement>
+            <Input type='email' placeholder='Email' className='input' />
+          </InputGroup>
+
+          <InputGroup>
+            <InputRightElement>
+              <img src={eyeVisibility} alt="olho" />
+            </InputRightElement>
+            <Input placeholder='Digite sua senha' type='password' className="input" />
+          </InputGroup>
+          <Button colorScheme='blue' className='button'>Entrar</Button>
+        </div>
+        <p>Ou prossiga com:</p>
+        <div className='ButtonContainer'>
+          <Button leftIcon={<img src={Gmail} alt="Gmail" />} variant="outline" className='BtGmail'>
+           Gmail
+          </Button>
+          <Button leftIcon={<img src={gitHub} alt="GitHub" />} variant="outline" className='BtGmail'>
+           Gmail
+          </Button>
+        </div>
+        <div className=''>
+
+        </div>
+      </div>
     </div>
   );
 }
+
 
 export default App;
